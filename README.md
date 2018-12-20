@@ -1,9 +1,9 @@
-It's me, fx!
+It's me, fengxu!
 
 # Usage
 Via npx:
 ```
-npx fx
+npx fengxu
 ```
-
-Not including how to use it globally because I'm not sure why you'd want this as a global command. That'd be creepy.
+___
+Fork from https://github.com/bnb/bitandbang
