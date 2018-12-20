@@ -14,33 +14,44 @@ const options = {
 
 // Text + chalk definitions
 const data = {
-  name: chalk.white('Tierney Cyren /'),
-  handle: chalk.cyan('bitandbang'),
-  work: chalk.white('Senior Cloud Developer Advocate at Microsoft'),
-  twitter: chalk.cyan('https://twitter.com/bitandbang'),
-  github: chalk.cyan('https://github.com/bnb'),
-  linkedin: chalk.cyan('https://linkedin.com/in/bitandbang'),
-  web: chalk.cyan('https://bnb.im'),
-  npx: chalk.white('npx bitandbang'),
+  name: chalk.white('隋堤倦客'),
+  handle: chalk.cyan('fengxu'),
+  work: chalk.white('Frontend Engineer at Meituan-Dianping'),
+  location: chalk.white('Beijing, China'),
+  github: chalk.cyan('https://github.com/fx109138'),
+  juejin: chalk.cyan('https://juejin.im/user/585c72fb8d6d810065d820b8'),
+  maimai: chalk.cyan('https://maimai.cn/contact/detail/194733023'),
+  web: chalk.cyan('http://fengxu.ink'),
+  npx: chalk.white('npx fengxu'),
   labelWork: chalk.white.bold('      Work:'),
-  labelTwitter: chalk.white.bold('   Twitter:'),
+  labelLocation: chalk.white.bold('  Location:'),
   labelGitHub: chalk.white.bold('    GitHub:'),
-  labelLinkedIn: chalk.white.bold('  LinkedIn:'),
+  labelJuejin: chalk.white.bold('    Juejin:'),
+  labelMaimai: chalk.white.bold('    Maimai:'),
   labelWeb: chalk.white.bold('       Web:'),
   labelCard: chalk.white.bold('      Card:')
 }
 
 // Actual strings we're going to output
 const newline = '\n'
-const heading = `${data.name} ${data.handle}`
+const heading = `                 ${data.name} / ${data.handle}`;
 const working = `${data.labelWork}  ${data.work}`
-const twittering = `${data.labelTwitter}  ${data.twitter}`
+const locating = `${data.labelLocation}  ${data.location}`
 const githubing = `${data.labelGitHub}  ${data.github}`
-const linkedining = `${data.labelLinkedIn}  ${data.linkedin}`
+const juejining = `${data.labelJuejin}  ${data.juejin}`
+const maimaiing = `${data.labelMaimai}  ${data.maimai}`
 const webing = `${data.labelWeb}  ${data.web}`
 const carding = `${data.labelCard}  ${data.npx}`
 
 // Put all our output together into a single variable so we can use boxen effectively
-const output = heading + newline + newline + working + newline + twittering + newline + githubing + newline + linkedining + newline + webing + newline + newline + carding
+const output = 
+  heading + newline + newline +
+  working + newline +
+  locating + newline + newline +
+  githubing + newline +
+  juejining + newline +
+  maimaiing + newline +
+  webing + newline + newline +
+  carding
 
 console.log(chalk.green(boxen(output, options)))
