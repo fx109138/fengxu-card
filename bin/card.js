@@ -14,8 +14,11 @@ const options = {
 
 // Text + chalk definitions
 const data = {
-  name: chalk.white('隋堤倦客'),
+  name: chalk.magenta('隋堤倦客'),
   handle: chalk.cyan('fengxu'),
+  email: chalk.white('fengxuneau@foxmail.com'),
+  tel: chalk.white('13009715105'),
+  wechatQQ: chalk.white('1091381572'),
   work: chalk.white('Frontend Engineer at Meituan-Dianping'),
   location: chalk.white('Beijing, China'),
   github: chalk.cyan('https://github.com/fx109138'),
@@ -23,18 +26,24 @@ const data = {
   maimai: chalk.cyan('https://maimai.cn/contact/detail/194733023'),
   web: chalk.cyan('http://fengxu.ink'),
   npx: chalk.white('npx fengxu'),
-  labelWork: chalk.white.bold('      Work:'),
-  labelLocation: chalk.white.bold('  Location:'),
-  labelGitHub: chalk.white.bold('    GitHub:'),
-  labelJuejin: chalk.white.bold('    Juejin:'),
-  labelMaimai: chalk.white.bold('    Maimai:'),
-  labelWeb: chalk.white.bold('       Web:'),
-  labelCard: chalk.white.bold('      Card:')
+  labelEmail: chalk.red.bold('     Email:'),
+  labelTel: chalk.red.bold('       TEL:'),
+  labelWechatQQ: chalk.red.bold(' QQ/Wechat:'),
+  labelWork: chalk.green.bold('      Work:'),
+  labelLocation: chalk.green.bold('  Location:'),
+  labelGitHub: chalk.blue.bold('    GitHub:'),
+  labelJuejin: chalk.blue.bold('    Juejin:'),
+  labelMaimai: chalk.blue.bold('    Maimai:'),
+  labelWeb: chalk.blue.bold('       Web:'),
+  labelCard: chalk.cyan.bold('      Card:')
 }
 
 // Actual strings we're going to output
 const newline = '\n'
-const heading = `                 ${data.name} / ${data.handle}`;
+const heading = `                     ${data.name} / ${data.handle}`;
+const emailing = `${data.labelEmail}  ${data.email}`
+const teling = `${data.labelTel}  ${data.tel}`
+const wechatQQing = `${data.labelWechatQQ}  ${data.wechatQQ}`
 const working = `${data.labelWork}  ${data.work}`
 const locating = `${data.labelLocation}  ${data.location}`
 const githubing = `${data.labelGitHub}  ${data.github}`
@@ -46,6 +55,9 @@ const carding = `${data.labelCard}  ${data.npx}`
 // Put all our output together into a single variable so we can use boxen effectively
 const output = 
   heading + newline + newline +
+  emailing + newline +
+  teling + newline +
+  wechatQQing + newline + newline +
   working + newline +
   locating + newline + newline +
   githubing + newline +
