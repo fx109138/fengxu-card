@@ -14,8 +14,8 @@ const options = {
 
 // Text + chalk definitions
 const data = {
-  name: chalk.magenta('隋堤倦客'),
-  handle: chalk.cyan('fengxu'),
+  name: chalk.magenta.bold('隋堤倦客'),
+  handle: chalk.yellow.bold('fengxu'),
   email: chalk.white('fengxuneau@foxmail.com'),
   tel: chalk.white('13009715105'),
   wechatQQ: chalk.white('1091381572'),
